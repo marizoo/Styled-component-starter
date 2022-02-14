@@ -5,6 +5,8 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 import styled from "styled-components";
 import Hero from "./components/hero/Hero";
 import ToggleTheme from "./UI/toggleTheme/ToggleTheme";
+import Logos from "./UI/logos/Logos";
+import Menu1 from "./UI/hamburger1/Menu1";
 
 const ScApp = styled.div`
     width: 100vw;
@@ -19,13 +21,17 @@ const App = () => {
         setMainCss((currentCss) => (currentCss === "light" ? "dark" : "light"));
     };
 
+    const [toggleMenu, setToggleMenu] = useState(false);
+
     return (
         <>
             <GlobalStyles />
             <ScApp className={`${mainCss}-theme`}>
                 <ToggleTheme onToggleTheme={toggleTheme} mainCss={mainCss} />
-                <Navbar />
+                <Navbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+                <Menu1 toggleMenu={toggleMenu} />
                 <Hero />
+                <Logos />
                 <Footer />
             </ScApp>
         </>

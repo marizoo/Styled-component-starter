@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GloPaddingSm } from "../../styles/GlobalStyles";
+import { GloMedium, GloPaddingSm, GloSmall } from "../../styles/GlobalStyles";
 
 export const ScNavbar = styled.div`
     ${GloPaddingSm};
@@ -11,11 +11,13 @@ export const ScNavbar = styled.div`
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--primary-color);
+    ${GloMedium({ flexDirection: "column" })}
 
     .navbarLogo {
         h2 {
             color: var(--col-brand);
         }
+        ${GloMedium({ marginBottom: "1rem" })}
     }
 
     .navbarLinks {
@@ -27,8 +29,10 @@ export const ScNavbar = styled.div`
 
         .navbarMenu {
             cursor: pointer;
-            margin-left: 1rem;
             transition: all 0.3s ease;
+            margin-left: 1rem;
+            ${GloMedium({ marginLeft: "5rem" })};
+            ${GloSmall({ marginLeft: "3rem" })};
 
             .navbarMenu-container {
                 display: flex;
@@ -38,14 +42,16 @@ export const ScNavbar = styled.div`
                 text-align: end;
                 background: var(--primary-bg);
                 padding: 2rem;
-                position: absolute;
-                top: 70px;
-                right: 90px;
                 margin-top: 1rem;
-                min-width: 210px;
                 border-radius: 5px;
                 box-shadow: var(--primary-boxShadow);
                 transition: all 0.3s ease;
+                position: absolute;
+                min-width: 210px;
+                top: 70px;
+                right: 90px;
+                ${GloMedium({ top: "60px", right: "70px", minWidth: "180px" })};
+                ${GloSmall({ top: "100px", right: "30px", minWidth: "180px" })};
             }
 
             .navbarMenu-container p {

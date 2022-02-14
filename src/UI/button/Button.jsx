@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { GloSmall } from "../../styles/GlobalStyles";
 
 const ScButton = styled.button`
-    padding: 3px 20px;
+    padding: 4px 20px;
     border: 0;
     cursor: pointer;
     background: var(--col-lightgray);
@@ -15,7 +15,7 @@ const ScButton = styled.button`
     display: flex;
     font-size: 16px;
 
-    ${GloSmall({ fontSize: "12px", fontWeight: "300", background: "green" })};
+    ${GloSmall({ fontSize: "13px", fontWeight: "400" })};
 
     &:hover {
         background: var(--col-gray);

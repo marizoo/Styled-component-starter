@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../../UI/button/Button";
+import Hamburger1 from "../../UI/hamburger1/Hamburger1";
+// import HamburgerRI from "../../UI/hamburger-RI/HamburgerRI";
+
 import { ScNavbar } from "./navbar.styled";
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 const Menu = () => (
     <>
@@ -23,9 +25,7 @@ const Menu = () => (
     </>
 );
 
-const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false);
-
+const Navbar = ({ toggleMenu, setToggleMenu }) => {
     return (
         <ScNavbar>
             <div className="navbarLogo">
@@ -36,24 +36,15 @@ const Navbar = () => {
                     <Button brand>CONTACT ME</Button>
                 </div>
                 <div className="navbarMenu">
-                    {toggleMenu ? (
-                        <RiCloseLine
-                            color="var(--primary-color)"
-                            size={27}
-                            onClick={() => setToggleMenu(false)}
-                        />
-                    ) : (
-                        <RiMenu3Line
-                            color="var(--primary-color)"
-                            size={27}
-                            onClick={() => setToggleMenu(true)}
-                        />
-                    )}
-                    {toggleMenu && (
-                        <div className="navbarMenu-container smoothShow">
-                            <Menu />
-                        </div>
-                    )}
+                    {/* <HamburgerRI
+                        Menu={Menu}
+                        toggleMenu={toggleMenu}
+                        setToggleMenu={setToggleMenu}
+                    /> */}
+                    <Hamburger1
+                        toggleMenu={toggleMenu}
+                        setToggleMenu={setToggleMenu}
+                    />
                 </div>
             </div>
         </ScNavbar>
