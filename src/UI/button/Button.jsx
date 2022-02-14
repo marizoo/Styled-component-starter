@@ -6,8 +6,8 @@ const ScButton = styled.button`
     padding: 3px 20px;
     border: 0;
     cursor: pointer;
-    background: lightgray;
-    color: black;
+    background: var(--col-lightgray);
+    color: var(--col-black);
     border-radius: 5px;
     font-weight: 500;
     margin: 5px 0;
@@ -18,30 +18,36 @@ const ScButton = styled.button`
     ${GloSmall({ fontSize: "12px", fontWeight: "300", background: "green" })};
 
     &:hover {
-        background: gray;
+        background: var(--col-gray);
+        color: var(--col-white);
     }
 
     ${(props) =>
         props.brand &&
         css`
-            background: var(--brand-color);
-            color: white;
+            background: var(--col-brand);
+            color: var(--col-black);
 
             &:hover {
-                background: var(--brand-color1);
+                background: var(--col-brand-darker);
+                color: var(--col-white);
             }
         `};
+
+    /* hotpink: #ff69b4;
+    hotpink darker: #c04e87; */
 
     ${(props) =>
         props.outline &&
         css`
-            border: 1.5px solid var(--brand-color);
-            color: var(--brand-color);
+            /* border: 1.5px solid var(--brand-color); */
+            border: 1.5px solid #ff69b4;
+            color: var(--col-brand);
             background: 0;
 
             &:hover {
-                background: var(--brand-color);
-                color: black;
+                background: var(--col-brand-darker);
+                color: var(--col-white);
             }
         `};
 `;

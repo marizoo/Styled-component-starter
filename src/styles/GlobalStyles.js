@@ -39,18 +39,21 @@ ul {
 }
 
 :root, .light-theme {
-    --white-color: #ff0000;
-    --gray-bg: lightgray;
-    --brand-color: hotpink;
-    --brand-color1: limegreen;
     --primary-color: #212121;
     --primary-bg: #fff;
+    --col-brand: #ff69b4;
+    --col-brand-darker: #c04e87;
+    --col-white: #fff;
+    --col-black: black;
+    --col-gray: gray;
+    --col-lightgray: lightgray;
   }
 
   .dark-theme {
     --primary-color: #fff;
     --primary-bg: #212121;
   }
+
 
 
 `;
