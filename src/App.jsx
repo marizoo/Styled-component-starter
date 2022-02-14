@@ -5,22 +5,15 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 import styled from "styled-components";
 import Button from "./UI/button/Button";
 import Hero from "./components/hero/Hero";
-import { RiSunLine, RiMoonLine } from "react-icons/ri";
+import ToggleTheme from "./UI/toggleTheme/ToggleTheme";
+// import { RiSunLine, RiMoonLine } from "react-icons/ri";
 // import { Routes, Route, Link } from "react-router-dom";
 
 const ScApp = styled.div`
     width: 100vw;
     background: var(--primary-bg);
     color: var(--primary-color);
-`;
-
-const ToggleButton = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    font-size: 18px;
-    margin: 1rem 4rem 0 0;
+    position: relative;
 `;
 
 const App = () => {
@@ -33,11 +26,7 @@ const App = () => {
         <>
             <GlobalStyles />
             <ScApp className={`${mainCss}-theme`}>
-                <ToggleButton onClick={toggleTheme}>
-                    {mainCss === "light" ? <RiMoonLine /> : <RiSunLine />}
-
-                    {/* <Button onClick={toggleTheme}>light/dark</Button> */}
-                </ToggleButton>
+                <ToggleTheme onToggleTheme={toggleTheme} mainCss={mainCss} />
                 <Navbar />
                 <Hero />
                 <Footer />

@@ -8,4 +8,5 @@ export const ScNavbar = styled.div`
     height: 300px;
     width: 100vw;
     color: var(--primary-color);
+    position: sticky;
 `;

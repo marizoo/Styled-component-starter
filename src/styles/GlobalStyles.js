@@ -16,7 +16,6 @@ html {
     font-family: 'Poppins', sans-serif; 
 }
 
-
 img {
     max-width: 100%;
 }
