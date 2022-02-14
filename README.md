@@ -25,4 +25,4 @@
 
 
 ## IMAGE:
-![Screenshot of the App](./screenshots/50.quiz-v1.png)
+![Screenshot of the App](./screenshots/sc-starter.png)

@@ -6,7 +6,7 @@ export const ScHero = styled.div`
     ${GloColumn};
     background: var(--primary-bg);
     color: var(--primary-color);
-    height: 100vh;
+    height: 300px;
 
     h2 {
         color: hotpink;
