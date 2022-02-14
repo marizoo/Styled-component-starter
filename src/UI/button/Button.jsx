@@ -66,3 +66,8 @@ const Button = ({ children, onClick, type, brand, outline }) => {
 };
 
 export default Button;
+
+// HOW TO USE:
+// <Button>just button</Button>
+//<Button brand>brand button</Button>
+//<Button outline> outline button</Button>

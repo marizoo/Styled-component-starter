@@ -38,9 +38,41 @@ ul {
     padding: 0;
 }
 
+
+/* SMOOTHSHOW ANIMATION */
+.smoothShow {
+	-webkit-animation: smooth-show 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: smooth-show 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes smooth-show {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes smooth-show {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* ROOT COLOR */
+
 :root, .light-theme {
     --primary-color: #212121;
     --primary-bg: #fff;
+    --primary-boxShadow: 0 0 5px rgba(0, 0, 0, 0.2);
     --col-brand: #ff69b4;
     --col-brand-darker: #c04e87;
     --col-white: #fff;
@@ -52,12 +84,12 @@ ul {
   .dark-theme {
     --primary-color: #fff;
     --primary-bg: #212121;
+    --primary-boxShadow: 0 0 5px rgba(255, 255, 255, 0.377);
   }
-
-
 
 `;
 
+// FUNCTIONS -----------------------------------
 // GLOBAL CENTER AND COLUMN STYLE
 // to use it :
 // ${GloColumn};
@@ -105,6 +137,20 @@ export const GloPadding = () => {
 
         @media screen and (max-width: 550px) {
             padding: 4rem 2rem;
+        }
+    `;
+};
+
+export const GloPaddingSm = () => {
+    return css`
+        padding: 2rem 6rem;
+
+        @media screen and (max-width: 700px) {
+            padding: 2rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            padding: 1.5rem 1rem;
         }
     `;
 };
@@ -184,4 +230,33 @@ export const GloXXL = (props) => {
 //     margin: 4rem 2rem;
 //   }
 // }
+// NOTES ----------------------------------------------
+// SMOOTH ANIMATION
+// .scale-up-center {
+// 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+// 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+// }
+
+// @-webkit-keyframes scale-up-center {
+//   0% {
+//     -webkit-transform: scale(0.5);
+//             transform: scale(0.5);
+//   }
+//   100% {
+//     -webkit-transform: scale(1);
+//             transform: scale(1);
+//   }
+// }
+
+// @keyframes scale-up-center {
+//   0% {
+//     -webkit-transform: scale(0.5);
+//             transform: scale(0.5);
+//   }
+//   100% {
+//     -webkit-transform: scale(1);
+//             transform: scale(1);
+//   }
+// }
+
 // NOTES ----------------------------------------------
