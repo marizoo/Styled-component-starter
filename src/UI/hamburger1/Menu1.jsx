@@ -1,18 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { GloMedium, GloSmall } from "../../styles/GlobalStyles";
 
 const ScMenu1 = styled.div`
-    height: 100vw;
-    width: 210px;
+    height: 100vh;
     z-index: 5;
-    background: var(--primary-bg);
-    color: var(--primary-color);
+    background: var(--col-lightgray);
     display: flex;
     justify-content: center;
     position: fixed;
-    transition: 1s all ease;
-    right: -300px;
     box-shadow: var(--primary-boxShadow);
+    right: -300px;
+    transition: all 1s ease;
+    width: 250px;
+    ${GloSmall({ height: "350px", width: "580px", alignItems: "center" })}
+    ${GloMedium({ height: "350px", width: "800px", alignItems: "center" })}
 
     &.active {
         right: 0;
@@ -20,27 +22,27 @@ const ScMenu1 = styled.div`
 
     ul {
         list-style: none;
-        width: 80%;
-        height: 20%;
-        margin-top: 100px;
+        width: 85%;
+        height: 90%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        color: var(--primary-color);
+        justify-content: flex-start;
+        align-items: end;
+        color: var(--col-gray);
 
         li {
             transition: all 0.3s ease;
             cursor: pointer;
-
-            &:hover {
-                color: var(--col-brand);
-            }
-
             color: inherit;
             text-decoration: none;
             font-size: 20px;
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 1.2rem 0;
             cursor: pointer;
+            &:hover {
+                color: var(--col-brand);
+            }
         }
     }
 `;

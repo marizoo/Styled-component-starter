@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import ToggleTheme from "./UI/toggleTheme/ToggleTheme";
 import Logos from "./UI/logos/Logos";
 import Menu1 from "./UI/hamburger1/Menu1";
+import Carousel from "./components/carousel/Carousel";
 
 const ScApp = styled.div`
     width: 100vw;
@@ -31,6 +32,20 @@ const App = () => {
                 <Navbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
                 <Menu1 toggleMenu={toggleMenu} />
                 <Hero />
+                <Carousel>
+                    <img
+                        src="https://via.placeholder.com/1600x300"
+                        alt="placeholder"
+                    />
+                    <img
+                        src="https://via.placeholder.com/1600x300"
+                        alt="placeholder"
+                    />
+                    <img
+                        src="https://via.placeholder.com/1600x300"
+                        alt="placeholder"
+                    />
+                </Carousel>
                 <Logos />
                 <Footer />
             </ScApp>
